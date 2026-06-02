@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solas Sunset Lamp | Bring the Golden Hour Into Your Room</title>
+    <meta name="description" content="Transform your space with the Solas Sunset Projection Lamp. 16 colors, remote control, and 360-degree rotation. Perfect for photography, aesthetic room decor, and relaxation. Order today for 50% off and free shipping!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="main-header">
+        <div class="logo">
+            <span class="logo-glow"></span>
+            <span class="logo-text">SOLAS</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#simulator">Interactive Demo</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+        <div class="nav-cta">
+            <a href="#checkout" class="btn btn-secondary btn-sm" id="nav-buy-button">Buy Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-glow"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">🔥 50% OFF - TODAY ONLY</span>
+                    <h1 class="hero-title">Bring the Golden Hour Home.</h1>
+                    <p class="hero-subtitle">Create a warm, relaxing atmosphere instantly. The Solas Sunset Lamp projects a mesmerizing sun glow that relaxes your mind, elevates your mood, and upgrades your bedroom aesthetics.</p>
+                    
+                    <!-- Urgency Timer -->
+                    <div class="promo-timer" id="promo-timer">
+                        <span class="timer-text">Limited offer ends in:</span>
+                        <div class="timer-clock">
+                            <span id="timer-mins">14</span>m <span id="timer-secs">59</span>s
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#checkout" class="btn btn-primary" id="hero-order-btn">Get Yours For $19.99</a>
+                        <a href="#simulator" class="btn btn-outline" id="hero-demo-btn">Try Interactive Preview</a>
+                    </div>
+
+                    <div class="trust-indicators">
+                        <div class="indicator"><span class="icon">✨</span> Free Shipping</div>
+                        <div class="indicator"><span class="icon">🛡️</span> 30-Day Money Back</div>
+                        <div class="indicator"><span class="icon">⭐</span> 4.9/5 Rating (840+ Reviews)</div>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="lamp-projection-bg" id="hero-projection"></div>
+                    <img src="sunset_lamp.png" alt="Aesthetic room lit by Solas Sunset Lamp" class="hero-image" id="hero-main-image">
+                    <div class="floating-badge">
+                        <span class="fb-number">16</span>
+                        <span class="fb-text">Colors In One</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Value Section -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Solas Beats Other Lamps</h2>
+                    <p class="section-subtitle">Crafted with high-transmittance crystal lenses and smart circuitry to deliver the brightest, most vivid projection on the market.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌅</div>
+                        <h3>16 Colors + 4 Modes</h3>
+                        <p>Change your room's vibe with a single click. Includes Sunset, Rainbow, Forest Green, Deep Sea Blue, and more.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>360° Rotatable Head</h3>
+                        <p>Adjust the angle to project on walls, ceilings, or floors. The farther the distance, the larger the projection.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔮</div>
+                        <h3>HD Crystal Lens</h3>
+                        <p>Unlike cheap plastic replicas, our thick glass crystal lens provides a crisp, halo-free gradient projection.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔌</div>
+                        <h3>USB Powered & Safe</h3>
+                        <p>Low voltage USB power means you can run it anywhere—off your laptop, phone charger, or power bank.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Simulator Section -->
+        <section class="simulator-section" id="simulator">
+            <div class="simulator-glow" id="sim-glow-bg"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Test the Magic</h2>
+                    <p class="section-subtitle">Click the buttons below to change the lamp colors and see how it transforms the room atmosphere in real-time!</p>
+                </div>
+
+                <div class="simulator-box">
+                    <div class="simulator-preview" id="sim-preview-room">
+                        <div class="sim-lamp-glow" id="sim-lamp-glow"></div>
+                        <img src="sunset_lamp.png" alt="Interactive Lamp Preview Room" class="sim-room-image">
+                        <span class="preview-tag">Live Preview</span>
+                    </div>
+
+                    <div class="simulator-controls">
+                        <h3>Select Color Profile:</h3>
+                        <div class="color-options">
+                            <button class="color-btn active" data-color="sunset" id="btn-color-sunset">
+                                <span class="dot sunset-dot"></span> Sunset Gold
+                            </button>
+                            <button class="color-btn" data-color="rainbow" id="btn-color-rainbow">
+                                <span class="dot rainbow-dot"></span> Rainbow Aurora
+                            </button>
+                            <button class="color-btn" data-color="cherry" id="btn-color-cherry">
+                                <span class="dot cherry-dot"></span> Cherry Blossom
+                            </button>
+                            <button class="color-btn" data-color="ocean" id="btn-color-ocean">
+                                <span class="dot ocean-dot"></span> Ocean Depth
+                            </button>
+                            <button class="color-btn" data-color="aurora" id="btn-color-aurora">
+                                <span class="dot aurora-dot"></span> Forest Aurora
+                            </button>
+                        </div>
+
+                        <div class="simulator-details">
+                            <h4 id="sim-color-title">Sunset Gold</h4>
+                            <p id="sim-color-desc">The classic warm, golden glow. Mimics the exact lighting of the last 15 minutes of a summer sunset. Promotes relaxation and deeper sleep.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section class="reviews-section" id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Loved by 840+ Cozy Homes</h2>
+                    <p class="section-subtitle">Here is what our customers have to say about their Solas Sunset Lamps.</p>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"I absolute love this lamp. It completely changes the mood of my room at night. I turn off all my normal lights and turn this on. It's so calming and relaxing."</p>
+                        <div class="review-author">
+                            <div class="avatar-fallback">JS</div>
+                            <div>
+                                <h4>Jessica S.</h4>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Perfect for photography! The gradient coloring is extremely clean and there are no fuzzy lines. My Instagram photos look like they were shot in a professional studio."</p>
+                        <div class="review-author">
+                            <div class="avatar-fallback">ML</div>
+                            <div>
+                                <h4>Marcus L.</h4>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Got this as a gift for my daughter and she is obsessed. The color choices are amazing. It is very sturdy and rotates smoothly. Sourcing was very quick."</p>
+                        <div class="review-author">
+                            <div class="avatar-fallback">SH</div>
+                            <div>
+                                <h4>Sarah H.</h4>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout / Buy Section -->
+        <section class="checkout-section" id="checkout">
+            <div class="container">
+                <div class="checkout-box">
+                    <div class="checkout-product-details">
+                        <h2>Order Your Solas Sunset Lamp</h2>
+                        <p class="checkout-desc">Get your lamp with a 16-color remote control, power adapter, and instruction manual. Free Worldwide Express Shipping included.</p>
+                        
+                        <div class="checkout-pricing">
+                            <div class="price-row">
+                                <span>Regular Price:</span>
+                                <span class="old-price">$39.99</span>
+                            </div>
+                            <div class="price-row highlight">
+                                <span>Today's Price (50% Off):</span>
+                                <span class="new-price">$19.99</span>
+                            </div>
+                            <div class="price-row shipping">
+                                <span>Shipping:</span>
+                                <span class="shipping-free">FREE Worldwide</span>
+                            </div>
+                        </div>
+
+                        <div class="checkout-trust-badges">
+                            <span>🔒 SSL Secure Checkout</span>
+                            <span>🚚 Tracked Shipping</span>
+                        </div>
+                    </div>
+
+                    <div class="checkout-form-container">
+                        <h3>Shipping Information</h3>
+                        <form id="order-form">
+                            <div class="form-group">
+                                <label for="customer-name">Full Name</label>
+                                <input type="text" id="customer-name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-email">Email Address</label>
+                                <input type="email" id="customer-email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-address">Shipping Address</label>
+                                <input type="text" id="customer-address" required placeholder="123 Cozy Lane, Apt 4">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="customer-city">City</label>
+                                    <input type="text" id="customer-city" required placeholder="New York">
+                                </div>
+                                <div class="form-group">
+                                    <label for="customer-zip">ZIP / Postal Code</label>
+                                    <input type="text" id="customer-zip" required placeholder="10001">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-order">Complete Order ($19.99)</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item" id="faq-item-1">
+                        <button class="faq-question">How does shipping work? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>We offer free worldwide tracked shipping. Orders are processed in 1-2 business days, and delivery usually takes between 7 to 12 business days depending on your location.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-item-2">
+                        <button class="faq-question">Does it come with a remote? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Yes! Every Solas Sunset Lamp includes a smart remote control that lets you select between 16 different colors, adjust the brightness, and select from 4 dynamic color transition modes.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-item-3">
+                        <button class="faq-question">Is it safe to leave on overnight? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Absolutely. The lamp is powered by a low-voltage (5V) USB connection and uses energy-efficient, cool-touch LED technology. It does not heat up, making it 100% safe for kids' bedrooms and overnight use.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-item-4">
+                        <button class="faq-question">What is your return policy? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>We offer a hassle-free 30-day money-back guarantee. If you are not completely satisfied with your lamp, simply contact our support email and we will issue a full refund, no questions asked.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 SOLAS Decor. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Order Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content">
+            <div class="success-icon">🎉</div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for shopping with SOLAS. Your order has been registered, and a confirmation email is on its way to <strong id="modal-email">your email</strong>.</p>
+            <button class="btn btn-primary" id="btn-close-modal">Got it!</button>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
