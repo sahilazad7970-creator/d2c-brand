@@ -128,7 +128,7 @@ faqQuestions.forEach(question => {
 });
 
 // ==========================================
-// MOCK SECURE CHECKOUT SUBMISSION
+// MOCK SECURE CHECKOUT SUBMISSION WITH PAYPAL
 // ==========================================
 const orderForm = document.getElementById('order-form');
 const successModal = document.getElementById('success-modal');
@@ -139,13 +139,28 @@ if (orderForm) {
     orderForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const emailInput = document.getElementById('customer-email');
-        if (emailInput) {
-            modalEmail.textContent = emailInput.value;
+        const nameInput = document.getElementById('customer-name').value;
+        const emailInput = document.getElementById('customer-email').value;
+        const addressInput = document.getElementById('customer-address').value;
+        const cityInput = document.getElementById('customer-city').value;
+        const zipInput = document.getElementById('customer-zip').value;
+
+        // Map values to PayPal form
+        document.getElementById('pp-first-name').value = nameInput;
+        document.getElementById('pp-email').value = emailInput;
+        document.getElementById('pp-address').value = addressInput;
+        document.getElementById('pp-city').value = cityInput;
+        document.getElementById('pp-zip').value = zipInput;
+
+        if (modalEmail) {
+            modalEmail.textContent = emailInput;
         }
 
-        // Trigger Success Modal
-        successModal.classList.add('active');
+        // Submit the PayPal checkout form (redirects customer to secure PayPal payment page)
+        const paypalForm = document.getElementById('paypal-form');
+        if (paypalForm) {
+            paypalForm.submit();
+        }
 
         // Reset the shipping form
         orderForm.reset();
@@ -155,6 +170,8 @@ if (orderForm) {
 if (btnCloseModal) {
     btnCloseModal.addEventListener('click', () => {
         successModal.classList.remove('active');
+        // Clear success query parameter from URL
+        window.history.replaceState({}, document.title, window.location.pathname);
     });
 }
 
@@ -162,5 +179,17 @@ if (btnCloseModal) {
 successModal.addEventListener('click', (e) => {
     if (e.target === successModal) {
         successModal.classList.remove('active');
+        // Clear success query parameter from URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+});
+
+// Check if returning from a successful PayPal payment on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+        if (successModal) {
+            successModal.classList.add('active');
+        }
     }
 });

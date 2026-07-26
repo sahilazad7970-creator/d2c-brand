@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="hero-buttons">
-                        <a href="#checkout" class="btn btn-primary" id="hero-order-btn">Get Yours For $19.99</a>
+                        <a href="#checkout" class="btn btn-primary" id="hero-order-btn">Get Yours For $29.99</a>
                         <a href="#simulator" class="btn btn-outline" id="hero-demo-btn">Try Interactive Preview</a>
                     </div>
 
@@ -212,7 +212,7 @@
                             </div>
                             <div class="price-row highlight">
                                 <span>Today's Price (50% Off):</span>
-                                <span class="new-price">$19.99</span>
+                                <span class="new-price">$29.99</span>
                             </div>
                             <div class="price-row shipping">
                                 <span>Shipping:</span>
@@ -251,7 +251,23 @@
                                     <input type="text" id="customer-zip" required placeholder="10001">
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-order">Complete Order ($19.99)</button>
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-order">Pay with PayPal or Card ($29.99)</button>
+                        </form>
+
+                        <!-- Hidden PayPal Form -->
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal-form" target="_blank" style="display:none;">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="sahilazad7970@gmail.com">
+                            <input type="hidden" name="item_name" value="Solas Sunset Projection Lamp">
+                            <input type="hidden" name="amount" value="29.99">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="no_shipping" value="1">
+                            <input type="hidden" name="first_name" id="pp-first-name" value="">
+                            <input type="hidden" name="email" id="pp-email" value="">
+                            <input type="hidden" name="address1" id="pp-address" value="">
+                            <input type="hidden" name="city" id="pp-city" value="">
+                            <input type="hidden" name="zip" id="pp-zip" value="">
+                            <input type="hidden" name="return" value="https://sahilazad7970-creator.github.io/d2c-brand/?success=true">
                         </form>
                     </div>
                 </div>
